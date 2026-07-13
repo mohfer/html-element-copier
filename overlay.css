@@ -1,0 +1,18 @@
+/* Overlay styles are primarily handled inline in content.js for dynamic positioning */
+/* This file provides fallback styles and CSS custom properties */
+
+:root {
+  --copier-highlight-color: rgb(111, 168, 220);
+  --copier-highlight-bg: rgba(111, 168, 220, 0.3);
+  --copier-tooltip-bg: rgba(0, 0, 0, 0.85);
+  --copier-z-overlay: 2147483647;
+  --copier-z-tooltip: 2147483648;
+}
+
+#html-copier-overlay {
+  box-sizing: border-box;
+}
+
+#html-copier-tooltip {
+  white-space: pre-line;
+}
