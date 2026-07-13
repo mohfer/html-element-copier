@@ -3,14 +3,14 @@
   
   # HTML Element Copier
 
-  **Copy HTML of any webpage element with a single click**
+**Copy HTML of any webpage element with a single click**
 
-  [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](manifest.json)
-  [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-  [![Chrome](https://img.shields.io/badge/chrome-manifest%20v3-orange.svg)](https://developer.chrome.com/docs/extensions/mv3/)
-  [![JavaScript](https://img.shields.io/badge/javascript-vanilla-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](manifest.json)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Chrome](https://img.shields.io/badge/chrome-manifest%20v3-orange.svg)](https://developer.chrome.com/docs/extensions/mv3/)
+[![JavaScript](https://img.shields.io/badge/javascript-vanilla-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-  A Chrome extension that lets you copy the HTML of any element on a webpage with a single click, similar to DevTools' Inspect Element feature.
+A Chrome extension that lets you copy the HTML of any element on a webpage with a single click, similar to DevTools' Inspect Element feature.
 
 </div>
 
@@ -50,6 +50,7 @@
 ### Load as Unpacked Extension
 
 1. Clone or download this repository:
+
    ```bash
    git clone https://github.com/mohfer/html-element-copier.git
    cd html-element-copier
@@ -72,6 +73,7 @@
 5. A toast notification confirms the copy
 
 **Keyboard shortcuts:**
+
 - **ESC** - Exit selection mode
 
 ## How It Works
@@ -88,6 +90,7 @@ Routes messages between the popup and content script. Handles content script inj
 
 **Content Script (`content.js`)**  
 Contains the selection logic:
+
 - Creates overlay and tooltip elements
 - Listens for mouse movement to update highlights
 - Intercepts clicks using capture phase to prevent website interactions
@@ -121,6 +124,7 @@ event.stopImmediatePropagation();
 ```
 
 This ensures clicks only select elements without:
+
 - Following links
 - Submitting forms
 - Opening modals
@@ -159,6 +163,7 @@ The extension requires minimal permissions:
 The extension cannot access content inside iframes from different domains due to the Same-Origin Policy.
 
 Examples:
+
 - ❌ YouTube embeds
 - ❌ Google Maps iframes
 - ✅ Same-origin iframes
@@ -184,32 +189,22 @@ The extension copies the HTML snapshot at the moment of selection. JavaScript st
 ### Debugging
 
 **Background Script:**
+
 ```
 chrome://extensions/ → HTML Element Copier → Service Worker → inspect
 ```
 
 **Content Script:**
+
 ```
 Open any webpage → F12 → Console tab
 ```
 
 **Popup:**
+
 ```
 Right-click extension icon → Inspect popup
 ```
-
-## Publishing
-
-Before publishing to the Chrome Web Store:
-
-1. Update `manifest.json` with proper version and metadata
-2. Create high-quality icons to replace placeholders
-3. Prepare store listing assets (screenshots, description, etc.)
-4. Create a ZIP file:
-   ```bash
-   zip -r html-element-copier.zip * -x "*.git*"
-   ```
-5. Upload to [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
 
 ## Future Ideas
 
@@ -230,6 +225,7 @@ Potential enhancements for future versions:
 No known issues at this time.
 
 To report a bug, please include:
+
 - Browser version
 - Extension version
 - Website URL where the issue occurred
