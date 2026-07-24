@@ -16,7 +16,7 @@ A Chrome extension that lets you copy the HTML of any element on a webpage with 
 
 ---
 
-## Demo
+## Screenshots
 
 <table>
 <tr>
